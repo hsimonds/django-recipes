@@ -1,0 +1,82 @@
+body {
+    background-color: WhiteSmoke;
+}
+body, html {
+    height: 100%;
+}
+
+.hero {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/recipe/hero-image.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+  height: 35%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.dropdown-toggle:active, .dropdown-toggle {
+    color:white !important;
+}
+
+.hero-title {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-img-detail {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.nav-link:hover {
+    color: #78becc;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #438694;
+    border-color: #438694;
+}
+
+.btn-primary:hover {
+    background-color: #78becc;
+    color: #000000;
+}
+
+.card-form {
+    width:40%;
+}
+
+.card-detail {
+    width:60%;
+}
+.card-home {
+    width: 18rem;
+}

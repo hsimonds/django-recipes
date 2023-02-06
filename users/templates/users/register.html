@@ -1,0 +1,21 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="card card-form mx-auto shadow mb-3">
+  <div class="card-body">
+    <h4 class="card-title text-center"><b>Register</b></h4>
+    <div class="container">
+      <div class="form-group">
+        <form method="POST">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+{% endblock content %}

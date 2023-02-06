@@ -1,0 +1,18 @@
+{% extends 'recipe/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Post</legend>
+                <h4>Are you sure you want to delete the recipe "{{ recipe.title }}"?</h4>
+                <b>This action cannot be undone</b>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger mb-3" type="submit">Yes, Delete</button>
+                <a class="btn btn-outline-secondary mb-3" href="{% url 'recipe-detail' recipe.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
