@@ -1,8 +1,8 @@
 from django.db import models
-from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from PIL import Image
+from datetime import date
 
 
 class Recipe(models.Model):
@@ -13,7 +13,7 @@ class Recipe(models.Model):
     content = models.TextField()
     description = models.TextField()
     image = models.ImageField(default='default.jpg', upload_to='recipe_images')
-    date_posted = models.DateTimeField(default=timezone.now)
+    date_posted = models.DateField(default=date.today)
     # can we update this to preserve recipes that users have saved after original owner deletes?
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
